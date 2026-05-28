@@ -44,10 +44,6 @@ export default function Home() {
               <h3>Share Stories</h3>
               <p>Leave reviews and insights to help others on their healing journey. All contributions are valued and reviewed.</p>
             </div>
-            <div className={styles.feature}>
-              <h3></h3>
-              <p></p>
-            </div>
           </div>
         </section>
       </Layout>

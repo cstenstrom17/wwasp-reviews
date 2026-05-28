@@ -37,7 +37,7 @@ export default function Browse() {
     <>
       <Head>
         <title>Browse Institutions Affiliated with the Troubled Teen Industry</title> 
-        <meta name="description" content="Browse all verified programs and treatment centers." />
+        <meta name="description" content="Browse all verified programs." />
       </Head>
 
       <Layout>
