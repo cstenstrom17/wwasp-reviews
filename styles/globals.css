@@ -4,11 +4,11 @@
   --bg-primary: #ffffff;
   --bg-secondary: #f8f7f6; 
   --text-primary: #1a1a1a;
-  --text-secondary: #5a5a5a;
-  --text-muted: #8a8a8a;
-  --border: #d5d4d3;
-  --accent: #2c5aa0;
-  --accent-light: #e8f0fa;
+  --text-secondary: #5a5a5a; /* medium dark grey */
+  --text-muted: #8a8a8a;  /*grey*/
+  --border: #d5d4d3; /*grayish orange */
+  --accent: #2c5aa0; /* azure blue */
+  --accent-light: #e8f0fa; /* light grayish blue */
   --success: #4a7c59;
   --warning: #c17a3a;
   --danger: #a94442;
