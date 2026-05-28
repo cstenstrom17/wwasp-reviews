@@ -36,14 +36,14 @@ export default function Browse() {
   return (
     <>
       <Head>
-        <title>Browse Programs - Healing Paths</title>
+        <title>Browse Institutions Affiliated with the Troubled Teen Industry</title>
         <meta name="description" content="Browse all verified programs and treatment centers." />
       </Head>
 
       <Layout>
         <div className={styles.header}>
           <h1>Browse Programs</h1>
-          <p>Explore verified programs and treatment centers dedicated to healing and recovery.</p>
+          <p>Explore verified programs affiliated with the Troubled Teen Industry.</p>
         </div>
 
         {error && (
@@ -68,7 +68,7 @@ export default function Browse() {
                   <div className={styles.cardContent}>
                     <h3>{school.name}</h3>
                     <p className={styles.location}>
-                      {school.city && school.state ? `${school.city}, ${school.state}` : 'Location not specified'}
+                      {school.city && school.state ? `${school.city}, ${school.state}` : school.state || 'Location not specified'}
                     </p>
                     {school.is_open !== null && (
                       <p className={styles.status}>
