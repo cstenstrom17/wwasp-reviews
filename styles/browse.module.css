@@ -46,6 +46,14 @@
   cursor: pointer;
 }
 
+.schoolsList > :nth-child(odd) .schoolCard {
+  background-color: #fafafa;
+}
+
+.schoolsList > :nth-child(even) .schoolCard {
+  background-color: var(--bg-primary);
+}
+
 .schoolCard:hover {
   border-color: var(--accent);
   box-shadow: 0 4px 16px rgba(44, 90, 160, 0.1);
