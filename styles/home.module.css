@@ -78,4 +78,35 @@
 }
 
 .feature:hover {
-  box-shadow: 0 4px 12px rgba(0, 0,
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.feature h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .about {
+    padding: 2rem 1.5rem;
+  }
+
+  .feature {
+    padding: 1.5rem;
+  }
+}
