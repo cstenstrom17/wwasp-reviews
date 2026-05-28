@@ -115,7 +115,7 @@ export default function SchoolDetail() {
   return (
     <>
       <Head>
-        <title>{school.name} - Healing Paths</title>
+        <title>{school.name} - Reviews</title>
         <meta name="description" content={`Information and reviews for ${school.name}`} />
       </Head>
 
@@ -177,7 +177,7 @@ export default function SchoolDetail() {
           <section className={styles.formSection}>
             <h2>Share Your Experience</h2>
             <p className={styles.formNote}>
-              Your review will be reviewed before posting. All submissions are valued and help others on their healing journey.
+              Your review will be reviewed before posting. Reviews aren't edited - just preventing spam.
             </p>
 
             {submitSuccess && (

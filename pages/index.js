@@ -14,8 +14,8 @@ export default function Home() {
       <Layout>
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1>Healing Paths</h1>
-            <p className={styles.subtitle}>A space for recovery, healing, and shared stories from those seeking to move forward.</p>
+            <h1>Reviews of the Troubled Teen Industry</h1>
+            <p className={styles.subtitle}>Reviews from those that survivied them.</p>
             <Link href="/browse" className={styles.cta}>
               Explore Programs
             </Link>
@@ -45,8 +45,8 @@ export default function Home() {
               <p>Leave reviews and insights to help others on their healing journey. All contributions are valued and reviewed.</p>
             </div>
             <div className={styles.feature}>
-              <h3>Community Support</h3>
-              <p>Connect through shared experiences and find strength in knowing you're not alone.</p>
+              <h3></h3>
+              <p></p>
             </div>
           </div>
         </section>
