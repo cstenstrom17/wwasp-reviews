@@ -1,0 +1,81 @@
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  margin-bottom: 6rem;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background-color: #1f4276;
+  transform: translateY(-2px);
+  color: white;
+  opacity: 1;
+}
+
+.about {
+  background-color: var(--bg-secondary);
+  padding: 4rem 2rem;
+  border-radius: 4px;
+  margin-bottom: 6rem;
+}
+
+.aboutContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.aboutContent h2 {
+  margin-bottom: 1.5rem;
+}
+
+.aboutContent p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.features {
+  margin-bottom: 2rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--bg-primary);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.feature:hover {
+  box-shadow: 0 4px 12px rgba(0, 0,

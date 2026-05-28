@@ -1,0 +1,52 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.schoolInfo {
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.schoolInfo h1 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.meta {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.meta p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.meta strong {
+  color: var(--text-primary);
+  min-width: 80px;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.status.open {
+  background-color: #e8f5e9;
+  color: var(--success);
+}
+
+.status.closed {
+  bac

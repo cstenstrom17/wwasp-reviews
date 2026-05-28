@@ -1,0 +1,113 @@
+.header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.loading,
+.empty,
+.error {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+.error {
+  background-color: #ffe8e8;
+  color: var(--danger);
+}
+
+.schoolsList {
+  display: grid;
+  gap: 1rem;
+}
+
+.schoolCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--bg-primary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.schoolCard:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(44, 90, 160, 0.1);
+  transform: translateX(4px);
+}
+
+.cardContent h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.location {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0;
+}
+
+.status {
+  margin: 1rem 0 0 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.open {
+  background-color: #e8f5e9;
+  color: var(--success);
+}
+
+.closed {
+  background-color: #ffe8e8;
+  color: var(--danger);
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.schoolCard:hover .arrow {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .schoolCard {
+    padding: 1.25rem;
+  }
+
+  .cardContent h3 {
+    font-size: 1.1rem;
+  }
+
+  .arrow {
+    opacity: 0.5;
+  }
+}
+EOF
