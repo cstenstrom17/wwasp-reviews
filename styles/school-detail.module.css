@@ -4,6 +4,7 @@
   gap: 4rem;
 }
 
+/* School Info Section */
 .schoolInfo {
   padding-bottom: 2rem;
   border-bottom: 2px solid var(--border);
@@ -49,4 +50,214 @@
 }
 
 .status.closed {
-  bac
+  background-color: #ffe8e8;
+  color: var(--danger);
+}
+
+/* Reviews Section */
+.reviewsSection {
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--border);
+}
+
+.reviewsSection h2 {
+  margin-bottom: 1.5rem;
+}
+
+.noReviews {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviewCard {
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--bg-primary);
+  transition: box-shadow 0.2s ease;
+}
+
+.reviewCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0 0;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  text-align: right;
+}
+
+.stars {
+  font-size: 1rem;
+  color: var(--warning);
+  letter-spacing: 2px;
+}
+
+.ratingNum {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.reviewText {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Form Section */
+.formSection {
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.formSection h2 {
+  margin-bottom: 0.75rem;
+}
+
+.formNote {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.success {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  color: var(--success);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.success p {
+  margin: 0;
+  color: var(--success);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+}
+
+.submitBtn {
+  background-color: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+  font-size: 1rem;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #1f4276;
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.error {
+  background-color: #ffe8e8;
+  color: var(--danger);
+}
+
+.error h2 {
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .detail {
+    gap: 2.5rem;
+  }
+
+  .reviewHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rating {
+    align-items: flex-start;
+  }
+
+  .formSection {
+    padding: 1.5rem;
+  }
+
+  .meta p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meta strong {
+    min-width: auto;
+  }
+}
