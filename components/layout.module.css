@@ -6,7 +6,7 @@
 
 .header {
   border-bottom: 1px solid var(--border);
-  background-color: var(--bg-primary);
+  background-color: rgb(255, 255, 255, 0.95);
   position: sticky;
   top: 0;
   z-index: 100;

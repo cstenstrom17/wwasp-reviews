@@ -29,7 +29,7 @@ export default function Home() {
               Many people have experienced trauma within institutional settings.
             </p>
             <p>
-              Reviews from people who have lived and experienced instiutions affiliated with the Troubled Teen Industry. 
+              Reviews from people who have lived and experienced the instiutions affiliated with the Troubled Teen Industry. 
             </p>
           </div>
         </section>
