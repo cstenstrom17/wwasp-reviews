@@ -7,11 +7,13 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <Link href="/" className={styles.logo}>
-            <h1>Healing Paths</h1>
+            <h1>Reviewing the Troubled Teen Industry</h1>
           </Link>
           <nav className={styles.nav}>
             <Link href="/">Home</Link>
             <Link href="/browse">Browse Programs</Link>
+           // <Link href="/submit">Submit Institution</Link>
+           // <Link href="/resources">Other Resources</Link>
           </nav>
         </div>
       </header>
@@ -21,7 +23,8 @@ export default function Layout({ children }) {
       </main>
       
       <footer className={styles.footer}>
-        <p>&copy; 2024 Healing Paths. A resource for recovery and healing.</p>
+        <p>&copy; 2026 Reviewing the Troubled Teen Industry.</p>
+        <p>Noticed an error? Let me know <a href="mailto:cstenstrom17@gmail.com">here.</a></p>
       </footer>
     </div>
   )
