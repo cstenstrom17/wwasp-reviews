@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Healing Paths - Recovery Resources</title>
-        <meta name="description" content="A resource for healing and recovery from institutional trauma." />
+        <title>Institution Reviews of the Troubled Teen Industry</title>
+        <meta name="description" content="Reviews from those that survived the Troubled Teen's Industry." />
       </Head>
       
       <Layout>
@@ -26,10 +26,10 @@ export default function Home() {
           <div className={styles.aboutContent}>
             <h2>About This Resource</h2>
             <p>
-              Many people have experienced trauma within institutional settings. This site serves as a directory and community space for those seeking programs, resources, and support in their healing journey.
+              Many people have experienced trauma within institutional settings.
             </p>
             <p>
-              Here you can discover programs and treatment centers, read authentic experiences from others, and contribute your own story to help others find their path forward.
+              Reviews from people who have lived and experienced instiutions affiliated with the Troubled Teen Industry. 
             </p>
           </div>
         </section>
@@ -38,7 +38,7 @@ export default function Home() {
           <div className={styles.featureGrid}>
             <div className={styles.feature}>
               <h3>Find Programs</h3>
-              <p>Browse verified programs and treatment centers dedicated to healing and recovery.</p>
+              <p>Browse verified programs, schools, camps and other institutions affiliated with the Troubled Teen Industry.</p>
             </div>
             <div className={styles.feature}>
               <h3>Share Stories</h3>
