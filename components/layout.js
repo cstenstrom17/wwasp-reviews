@@ -7,13 +7,13 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <Link href="/" className={styles.logo}>
-            <h1>Reviewing the Troubled Teen Industry</h1>
+            <h1>TTI Reviews</h1>
           </Link>
           <nav className={styles.nav}>
             <Link href="/">Home</Link>
             <Link href="/browse">Browse Programs</Link>
-           // <Link href="/submit">Submit Institution</Link>
-           // <Link href="/resources">Other Resources</Link>
+            <Link href="/submit">Submit Institution</Link>
+            <Link href="/resources">Other Resources</Link>
           </nav>
         </div>
       </header>
