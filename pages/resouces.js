@@ -1,18 +1,40 @@
-import { useEffect, useState } from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { supabase } from '../../lib/supabase'
-import Layout from '../../components/layout'
-import styles from '../../styles/school-detail.module.css'
+import Link from 'next/link'
+import Layout from '../components/layout'
+import styles from '../styles/resources.module.css'
 
-export default function SchoolDetail() {
-  const router = useRouter()
-  const { id } = router.query
-  
-  const [school, setSchool] = useState(null)
-  const [reviews, setReviews] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [submitting, setSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
-  
+export default function Resources() {
+  return (
+    <>
+      <Head>
+        <title>Further Resources</title>
+        <meta name="description" content="Further resources and reading about the Troubled Teen Industry." />
+      </Head>
+
+      <Layout>
+        <div className={styles.header}>
+          <h1>Resources</h1>
+          <p>Further information and resources about the Troubled Teen Industry</p>
+        </div>
+
+        <div className={styles.resourcesList}>
+          <div className={styles.resource}>
+            <h3>Resource Name Here</h3>
+            <p className={styles.description}>Brief description of what this resource offers.</p>
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              Visit Website
+            </a>
+          </div>
+
+          <div className={styles.resource}>
+            <h3>Another Resource</h3>
+            <p className={styles.description}>Another brief description.</p>
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              Visit Website
+            </a>
+          </div>
+        </div>
+      </Layout>
+    </>
+  )
+}
