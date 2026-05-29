@@ -110,6 +110,8 @@ export default function Browse() {
                         </span>
                       </p>
                     )}
+                    </div>
+                  </div>
               </Link>
             ))}
           </div>
