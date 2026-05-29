@@ -79,11 +79,28 @@ export default function Browse() {
           <p>Explore verified programs affiliated with the Troubled Teen Industry.</p>
         </div>
 
-        {error && (
-          <div className={styles.error}>
-            <p>Unable to load programs. Please try again later.</p>
-          </div>
-        )}
+        <div className={styles.filterSection}>
+            <label htmlFor="stateFilter">Filter by State:</label>
+            <select
+            id="stateFilter"
+            value={selectedState}
+            onChange={handleStateChange}
+            className={styles.filterSelect}
+        >
+            <option value="">All States</option>
+            {states.map((state) => (
+                <option key={state} value={state}>
+            {state}
+        </option>
+        ))}
+        </select>
+    </div>
+
+    {error && (
+        <div className={styles.error}>
+        <p>Unable to load programs. Please try again later.</p>
+      </div>
+    )}
 
         {loading ? (
           <div className={styles.loading}>

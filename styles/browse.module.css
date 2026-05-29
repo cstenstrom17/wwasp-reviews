@@ -86,6 +86,7 @@
   border: 1px solid var(--border);
   border-radius: 4px;
   background-color: var(--bg-primary);
+  text-decoration: none !important;
   transition: all 0.2s ease;
   cursor: pointer;
 }
