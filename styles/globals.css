@@ -74,6 +74,7 @@ a:hover {
 
 button {
   font-family: 'Inter', sans-serif;
+  color: var(--bg-secondary);
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
