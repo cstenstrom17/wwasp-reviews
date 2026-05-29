@@ -110,9 +110,6 @@ export default function Browse() {
                         </span>
                       </p>
                     )}
-                  </div>
-                  <div className={styles.arrow}>→</div>
-                </div>
               </Link>
             ))}
           </div>

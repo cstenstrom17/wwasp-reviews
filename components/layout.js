@@ -13,7 +13,7 @@ export default function Layout({ children }) {
             <Link href="/">Home</Link>
             <Link href="/browse">Browse Programs</Link>
             <Link href="/submit">Submit Institution</Link>
-            <Link href="/resources">Other Resources</Link>
+            <Link href="/resources">Resources</Link>
           </nav>
         </div>
       </header>

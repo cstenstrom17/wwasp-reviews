@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Head>
         <title>Institution Reviews of the Troubled Teen Industry</title>
-        <meta name="description" content="Reviews from those that survived the Troubled Teen's Industry." />
+        <meta name="description" content="Reviews from those that survived the Troubled Teen Industry." />
       </Head>
       
       <Layout>
