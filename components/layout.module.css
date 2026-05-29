@@ -7,6 +7,7 @@
 .header {
   border-bottom: 1px solid var(--border);
   background-color: rgb(255, 255, 255, 0.95);
+  text-decoration: none !important;
   background-image: none !important;
   position: sticky;
   top: 0;
@@ -24,6 +25,7 @@
 
 .logo {
   color: var(--text-primary);
+  text-decoration: none !important;
   transition: opacity 0.2s ease;
 }
 
