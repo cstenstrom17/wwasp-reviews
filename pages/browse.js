@@ -9,19 +9,27 @@ export default function Browse() {
   const [schools, setSchools] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [selectedState, setSelectedState] = useState('')
+  const [states, setStates] = useState([])
 
   useEffect(() => {
     fetchSchools()
+    fetchStates()
   }, [])
 
-  async function fetchSchools() {
+  async function fetchSchools(filterState = '') {
     try {
       setLoading(true)
-      const { data, error } = await supabase
+      let query = supabase
         .from('schools')
         .select('id, name, city, state, is_open')
         .eq('is_approved', true)
-        .order('name')
+
+      if (filterState) {
+        query = query.eq('state', filterState)
+      }
+
+      const { data, error } = await query.order('name')
 
       if (error) throw error
       setSchools(data || [])
@@ -31,6 +39,31 @@ export default function Browse() {
     } finally {
       setLoading(false)
     }
+  }
+
+  async function fetchStates() {
+    try {
+      const { data, error } = await supabase
+        .from('schools')
+        .select('state')
+        .eq('is_approved', true)
+        .neq('state', null)
+        .order('state')
+
+      if (error) throw error
+
+      // Get unique states
+      const uniqueStates = [...new Set(data.map(s => s.state))]
+      setStates(uniqueStates)
+    } catch (err) {
+      console.error('Error fetching states:', err)
+    }
+  }
+
+  const handleStateChange = (e) => {
+    const state = e.target.value
+    setSelectedState(state)
+    fetchSchools(state)
   }
 
   return (
