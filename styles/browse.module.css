@@ -87,6 +87,7 @@
   border-radius: 4px;
   background-color: var(--bg-primary);
   text-decoration: none !important;
+  background-image: none !important;
   transition: all 0.2s ease;
   cursor: pointer;
 }
@@ -110,6 +111,7 @@
   margin: 0 0 0.5rem 0;
   color: var(--text-primary);
   text-decoration: none !important;
+  background-image: none !important;
 }
 
 .location {
