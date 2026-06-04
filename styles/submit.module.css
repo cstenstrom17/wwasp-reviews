@@ -30,7 +30,6 @@
 
 .success p {
   margin: 0;
-  color: var(--success);
 }
 
 .errorBox {
@@ -44,7 +43,6 @@
 
 .errorBox p {
   margin: 0;
-  color: var(--danger);
 }
 
 .form {
@@ -71,17 +69,9 @@
   font-size: 0.95rem;
 }
 
+/* Base input properties now inherit from globals.css automatically */
 .formGroup input {
-  padding: 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.formGroup input:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-light);
+  width: 100%;
 }
 
 .submitBtn {
@@ -90,20 +80,13 @@
   padding: 1rem 2rem;
   font-weight: 600;
   border-radius: 4px;
-  cursor: pointer;
   transition: all 0.2s ease;
   font-size: 1rem;
-  border: none;
 }
 
 .submitBtn:hover:not(:disabled) {
   background-color: #1f4276;
   transform: translateY(-2px);
-}
-
-.submitBtn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

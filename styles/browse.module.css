@@ -5,7 +5,6 @@
 
 .header h1 {
   margin-bottom: 1rem;
-  text-decoration: none !important;
 }
 
 .header p {
@@ -13,7 +12,6 @@
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
-  text-decoration: none !important;
 }
 
 .loading,
@@ -56,23 +54,6 @@
   cursor: pointer;
 }
 
-.filterSelect:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-light);
-}
-
-@media (max-width: 768px) {
-  .filterSection {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-    .filterSelect {
-    width: 100%;
-  }
-}
-
 .schoolsList {
   display: grid;
   gap: 1rem;
@@ -86,12 +67,11 @@
   border: 1px solid var(--border);
   border-radius: 4px;
   background-color: var(--bg-primary);
-  text-decoration: none !important;
-  background-image: none !important;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
+/* Zebra striping (overrides white card bg with grey tones) */
 .schoolsList > :nth-child(odd) .schoolCard {
   background-color: #e0e0e0;
 }
@@ -110,15 +90,11 @@
   font-size: 1.25rem;
   margin: 0 0 0.5rem 0;
   color: var(--text-primary);
-  text-decoration: none !important;
-  background-image: none !important;
 }
 
 .location {
   font-size: 0.95rem;
   color: var(--text-muted);
-  text-decoration: none !important;
-  background-image: none !important;
   margin: 0.5rem 0;
 }
 
@@ -149,6 +125,15 @@
 }
 
 @media (max-width: 768px) {
+  .filterSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterSelect {
+    width: 100%;
+  }
+
   .schoolCard {
     padding: 1.25rem;
   }
@@ -165,7 +150,6 @@
   .schoolLink:hover,
   .schoolLink:visited,
   .schoolLink:active {
-    text-decoration: none !important;
     color: var(--text-primary);
     display: block;
   }
