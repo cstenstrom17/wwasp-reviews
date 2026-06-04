@@ -69,7 +69,7 @@ export default function Submit() {
   return (
     <>
       <Head>
-        <title>Submit a Program - Healing Paths</title>
+        <title>Submit a Program</title>
         <meta name="description" content="Submit a program or institution to our directory." />
       </Head>
 
@@ -128,3 +128,46 @@ export default function Submit() {
                   name="state"
                   placeholder="e.g. Utah"
                   value={formData.state}
+onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="address">Street Address</label>
+              <input
+                id="address"
+                type="text"
+                name="address"
+                placeholder="Optional"
+                value={formData.address}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="zip">ZIP Code</label>
+              <input
+                id="zip"
+                type="text"
+                name="zip"
+                placeholder="Optional"
+                value={formData.zip}
+                onChange={handleChange}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={submitting}
+              className={styles.submitBtn}
+            >
+              {submitting ? 'Submitting...' : 'Submit Program'}
+            </button>
+          </form>
+        </div>
+      </Layout>
+    </>
+  )
+}
