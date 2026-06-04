@@ -27,6 +27,7 @@
   font-weight: 600;
   transition: background-color 0.2s ease, transform 0.2s ease;
   text-decoration: none;
+  opacity: 1;
 }
 
 .cta:hover {

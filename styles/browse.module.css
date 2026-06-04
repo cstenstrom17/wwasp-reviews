@@ -144,13 +144,6 @@
   color: var(--danger);
 }
 
-.arrow {
-  font-size: 1.5rem;
-  color: var(--accent);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
 .schoolCard:hover .arrow {
   opacity: 1;
 }
@@ -173,7 +166,7 @@
   .schoolLink:visited,
   .schoolLink:active {
     text-decoration: none !important;
-    color: inherit;
+    color: var(--text-primary);
     display: block;
   }
 }
