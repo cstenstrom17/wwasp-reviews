@@ -101,7 +101,7 @@
 }
 
 .schoolCard:hover {
-  border-color: var(--accent);
+  border-color: var(--bg-primary);
   box-shadow: 0 4px 16px rgba(44, 90, 160, 0.1);
   transform: translateX(4px);
 }
@@ -117,6 +117,8 @@
 .location {
   font-size: 0.95rem;
   color: var(--text-muted);
+  text-decoration: none !important;
+  background-image: none !important;
   margin: 0.5rem 0;
 }
 
