@@ -73,11 +73,11 @@
 
 /* Zebra striping (overrides white card bg with grey tones) */
 .schoolsList > :nth-child(odd) .schoolCard {
-  background-color: #e0e0e0;
+  background-color: var(--bg-primary;
 }
 
 .schoolsList > :nth-child(even) .schoolCard {
-  background-color: bfbfbf;
+  background-color: var(--accent-light);
 }
 
 .schoolCard:hover {
