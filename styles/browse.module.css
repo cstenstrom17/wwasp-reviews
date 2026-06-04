@@ -77,7 +77,7 @@
 }
 
 .schoolsList > :nth-child(even) .schoolCard {
-  background-color: #d5d5d5;
+  background-color: bfbfbf;
 }
 
 .schoolCard:hover {
