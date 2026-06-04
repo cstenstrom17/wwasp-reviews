@@ -113,7 +113,8 @@ export default function Browse() {
         ) : (
           <div className={styles.schoolsList}>
             {schools.map((school) => (
-              <Link key={school.id} href={`/schools/${school.id}`}>
+              <Link key={school.id} href={`/schools/${school.id}`}
+                className={styles.schoolLink}>
                 <div className={styles.schoolCard}>
                   <div className={styles.cardContent}>
                     <h3>{school.name}</h3>

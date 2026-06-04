@@ -93,7 +93,7 @@
 }
 
 .schoolsList > :nth-child(odd) .schoolCard {
-  background-color: e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .schoolsList > :nth-child(even) .schoolCard {
@@ -166,5 +166,14 @@
 
   .arrow {
     opacity: 0.5;
+  }
+
+  .schoolLink,
+  .schoolLink:hover,
+  .schoolLink:visited,
+  .schoolLink:active {
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
   }
 }
