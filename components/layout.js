@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import './styles/globals.css'
 import styles from './layout.module.css'
 
 export default function Layout({ children }) {

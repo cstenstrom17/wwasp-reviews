@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { supabase } from '../lib/supabase'
 import Layout from '../components/layout'
 import styles from '../styles/browse.module.css'
-import styles from '../styles/globals.css'
+
 
 export default function Browse() {
   const [schools, setSchools] = useState([])
