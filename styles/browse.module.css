@@ -32,7 +32,7 @@
 .filterSection {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   border-radius: 4px;
   display: flex;
   align-items: center;
