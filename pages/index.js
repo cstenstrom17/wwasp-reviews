@@ -15,10 +15,13 @@ export default function Home() {
         {/* Scroll-snap sticky hero */}
         <header className={styles.scrollHero} style={{ '--count': 7 }}>
           <div className={styles.scrollHeroInner}>
-            <h1>
-              <span className={styles.srOnly}>You were heard.</span>
-              <span aria-hidden="true" className={styles.youWere}>you were&nbsp;</span>
-            </h1>
+            <h1 className={styles.srOnly}>You were heard.</h1>
+
+            {/* youWereWrapper must be a direct flex child for sticky to work */}
+            <div className={styles.youWereWrapper} aria-hidden="true">
+              <span className={styles.youWere}>you were&nbsp;</span>
+            </div>
+
             <ul aria-hidden="true">
               <li style={{ '--i': 0 }}>believed.</li>
               <li style={{ '--i': 1 }}>heard.</li>
@@ -31,12 +34,14 @@ export default function Home() {
           </div>
         </header>
 
-        {/* CTA panel that slides in after scroll */}
+        {/* CTA panel that grows in after scroll */}
         <main className={styles.heroCta}>
           <section className={styles.heroCtaInner}>
-            <p className={`${styles.fluid} ${styles.ctaText}`}>
+            <p className={styles.ctaText}>
               your story matters.<br />
-              <Link href="/browse" className={styles.ctaLink}>explore programs</Link>
+              <Link href="/browse" className={styles.ctaLink}>
+                explore programs
+              </Link>
             </p>
           </section>
         </main>
@@ -71,4 +76,3 @@ export default function Home() {
     </>
   )
 }
-

@@ -28,15 +28,25 @@
   padding-top: calc(var(--start) - 0.5lh);
 }
 
-.youWere {
+/*
+  KEY FIX: sticky must be on a direct flex child.
+  The span.youWere was nested inside h1, so sticky had no effect.
+  We move sticky to a wrapper div that IS a direct flex child.
+*/
+.youWereWrapper {
   position: sticky;
   top: calc(var(--start) - 0.5lh);
+  height: fit-content;
+  align-self: flex-start;
+}
+
+.youWere {
   font-size: inherit;
   margin: 0;
   display: inline-block;
-  height: fit-content;
   font-weight: 400;
   color: var(--text-charcoal);
+  white-space: nowrap;
 }
 
 .scrollHero ul {
@@ -115,7 +125,6 @@
 .ctaLink:hover {
   opacity: 0.75;
 }
-
 
 /* ============================================
    SCROLL ANIMATION (progressive enhancement)
