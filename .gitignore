@@ -3,3 +3,5 @@ node_modules/
 out/
 *.log
 .DS_Store
+github_ssh
+github_ssh.pub
