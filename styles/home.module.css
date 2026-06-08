@@ -28,11 +28,6 @@
   padding-top: calc(var(--start) - 0.5lh);
 }
 
-/*
-  KEY FIX: sticky must be on a direct flex child.
-  The span.youWere was nested inside h1, so sticky had no effect.
-  We move sticky to a wrapper div that IS a direct flex child.
-*/
 .youWereWrapper {
   position: sticky;
   top: calc(var(--start) - 0.5lh);
@@ -50,6 +45,7 @@
 }
 
 .scrollHero ul {
+  font-family: 'Lato'
   font-weight: 400;
   padding-inline: 0;
   margin: 0;
