@@ -1,3 +1,7 @@
+/* ============================================
+   SCROLL-SNAP STICKY HERO
+   ============================================ */
+
 .scrollHero {
   --start: 50vh;
   --space: 50vh;
@@ -112,10 +116,6 @@
   opacity: 0.75;
 }
 
-/* scroll-snap on html for the li items */
-:global(html) {
-  scroll-snap-type: y proximity;
-}
 
 /* ============================================
    SCROLL ANIMATION (progressive enhancement)
