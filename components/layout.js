@@ -21,11 +21,17 @@ export default function Layout({ children }) {
       <main className={styles.main}>
         {children}
       </main>
-      
       <footer className={styles.footer}>
-        <p>&copy; 2026 Reviewing the Troubled Teen Industry.</p>
-        <p>Noticed an error? Let me know <a href="mailto:cstenstrom17@gmail.com">here.</a></p>
-      </footer>
+  <p>&copy; 2026 Reviewing the Troubled Teen Industry.</p>
+  <p>
+    Noticed an error? Let me know{" "}
+    <a href="mailto:cstenstrom17@gmail.com" className={styles.footerLink}>
+      here.
+    </a>
+  </p>
+</footer>
+
+      
     </div>
   )
 }
