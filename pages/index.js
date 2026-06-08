@@ -14,7 +14,7 @@ export default function Home() {
       <Layout>
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1>Reviews of the Troubled Teen Industry</h1>
+            <h1>Reviewing the Troubled Teen Industry</h1>
             <p className={styles.subtitle}>Reviews from those that survivied them.</p>
             <Link href="/browse" className={styles.cta}>
               Explore Programs
