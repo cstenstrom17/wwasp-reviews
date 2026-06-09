@@ -57,7 +57,7 @@ export default function Home() {
         <div className={styles.pageContent}>
           <section className={styles.about}>
             <div className={styles.aboutContent}>
-              <h2>About This Resource</h2>
+              <h2>About</h2>
               <p>
                 Many people have experienced trauma within institutional settings.
               </p>
