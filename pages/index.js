@@ -1,14 +1,21 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Layout from '../components/layout'
 import styles from '../styles/home.module.css'
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <>
       <Head>
         <title>Institution Reviews of the Troubled Teen Industry</title>
         <meta name="description" content="Reviews from those that survived the Troubled Teen Industry." />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       
       <Layout>
@@ -17,7 +24,7 @@ export default function Home() {
           <div className={styles.scrollHeroInner}>
             <h1 className={styles.srOnly}>You were heard.</h1>
 
-            {/* youWereWrapper must be a direct flex child for sticky to work */}
+            {/* Direct flex child — required for sticky to work */}
             <div className={styles.youWereWrapper} aria-hidden="true">
               <span className={styles.youWere}>you were&nbsp;</span>
             </div>
@@ -34,15 +41,16 @@ export default function Home() {
           </div>
         </header>
 
-        {/* CTA panel that grows in after scroll */}
+        {/* CTA panel */}
         <main className={styles.heroCta}>
           <section className={styles.heroCtaInner}>
-            <p className={styles.ctaText}>
-              your story matters.<br />
-              <Link href="/browse" className={styles.ctaLink}>
-                explore programs
-              </Link>
-            </p>
+            <p className={styles.ctaText}>your story matters.</p>
+            <button
+              className={styles.ctaButton}
+              onClick={() => router.push('/browse')}
+            >
+              Explore Programs
+            </button>
           </section>
         </main>
 
