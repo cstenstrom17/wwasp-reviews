@@ -12,6 +12,8 @@
   --accent-brown: #65483A;
   --text-charcoal: #2F2F2F;
 
+  -text-shadow: 2px, 2px, 4px, rgba(0, 0, 0, 0.5);
+
   /* Semantic Tokens */
   --bg-primary: var(--neutral-light);
   --bg-secondary: var(--neutral-warm);
