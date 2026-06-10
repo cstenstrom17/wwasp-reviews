@@ -81,6 +81,7 @@
   white-space: nowrap;
   /* nudge baseline to align with the taller serif */
   padding-top: 0.18em;
+  text-shadow: var(--text-shadow-soft);
 }
 
 .scrollHero ul {
@@ -271,7 +272,7 @@
   margin-bottom: 1.5rem;
   font-family: 'Playball', cursive;
   font-weight: 400;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow-soft);
 }
 
 .aboutContent p {
