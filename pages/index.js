@@ -62,7 +62,7 @@ export default function Home() {
                 The Troubled Teen Industry is made up of wilderness therapy programs, boot camps, residential
                 treatment centers, and therapeutic boarding schools. Often unregulated, an estimated 100,000
                 to 120,000 are in these facilities every year. <br />
-                Source:{' '}
+                <span className={styles.source}>Source:{' '}
                 <a
                   href="https://www.unh.edu/inquiryjournal/blog/2022/04/troubled-teen-industry-its-effects-oral-history"
                   target="_blank"
