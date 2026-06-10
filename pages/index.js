@@ -62,7 +62,7 @@ export default function Home() {
                 Far too many children and adolescents have experienced trauma within institutional settings. The Troubled Teen Industry is made up of wilderness therapy programs, boot camps, residential treatment centers, and therapeutic boarding schools. 
               </p>
               <p>
-                Read reviews from people who have lived in and experienced these institutions.
+                
               </p>
             </div>
           </section>
@@ -71,11 +71,14 @@ export default function Home() {
             <div className={styles.featureGrid}>
               <div className={styles.feature}>
                 <h3>Find Programs</h3>
-                <p>Browse verified programs, schools, camps and other institutions affiliated with the Troubled Teen Industry.</p>
+                <p>Browse programs, schools, camps and other institutions affiliated with the Troubled Teen Industry.</p>
               </div>
               <div className={styles.feature}>
                 <h3>Share Stories</h3>
-                <p>Leave reviews and share your story. All contributions are valued.</p>
+                <p>Leave reviews and share your story.</p>
+                  <div className={styles.feature}>
+               <h3>Learn & Connect</h3>
+               <p>Read first hand experiences and learn from those that lived through it.</p>
               </div>
             </div>
           </section>

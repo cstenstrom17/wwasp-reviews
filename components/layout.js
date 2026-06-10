@@ -7,7 +7,7 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <Link href="/" className={styles.logo}>
-            <h1>TTI Reviews</h1>
+            <h1>Reviewing TTI</h1>
           </Link>
           <nav className={styles.nav}>
             <Link href="/">Home</Link>
