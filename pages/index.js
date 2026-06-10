@@ -70,6 +70,7 @@ export default function Home() {
                 >
                   University of New Hampshire Inquiry Journal
                 </a>
+                      </span>
               </p>
             </div>
           </section>
