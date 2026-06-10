@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Institution Reviews of the Troubled Teen Industry</title>
+        <title>Reviews of the Troubled Teen Industry</title>
         <meta name="description" content="Reviews from those that survived the Troubled Teen Industry." />
         <link
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap"
@@ -59,10 +59,10 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <h2>What's this about?</h2>
               <p>
-                Many people have experienced trauma within institutional settings.
+                Far to many children and adolescents have experienced trauma within institutional settings. The Troubled Teen Industry is made up of wilderness therapy programs, boot camps, residential treatment centers, and therapeutic boarding schools. 
               </p>
               <p>
-                Reviews from people who have lived and experienced the institutions affiliated with the Troubled Teen Industry.
+                Read reviews from people who have lived in and experienced these institutions.
               </p>
             </div>
           </section>
@@ -75,7 +75,7 @@ export default function Home() {
               </div>
               <div className={styles.feature}>
                 <h3>Share Stories</h3>
-                <p>Leave reviews and insights to help others on their healing journey. All contributions are valued and reviewed.</p>
+                <p>Leave reviews and share your story. All contributions are valued.</p>
               </div>
             </div>
           </section>

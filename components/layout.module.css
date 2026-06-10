@@ -32,6 +32,8 @@
 
 .logo h1 {
   margin: 0;
+  font-family: 'Playball', cursive;
+  text-shadow: var(--text-shadow-soft);
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--neutral-light);
