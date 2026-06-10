@@ -2,8 +2,6 @@
    SCROLL-SNAP STICKY HERO
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
-
 .scrollHero {
   --start: 50vh;
   --space: 50vh;
