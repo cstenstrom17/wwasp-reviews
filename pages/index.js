@@ -81,6 +81,7 @@ export default function Home() {
                <p>Read first hand experiences and learn from those that lived through it.</p>
               </div>
             </div>
+           </div>
           </section>
         </div>
       </Layout>
