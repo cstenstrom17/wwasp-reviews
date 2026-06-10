@@ -76,11 +76,11 @@ export default function Home() {
               <div className={styles.feature}>
                 <h3>Share Stories</h3>
                 <p>Leave reviews and share your story.</p>
-                  <div className={styles.feature}>
+            </div>
+                <div className={styles.feature}>
                <h3>Learn & Connect</h3>
                <p>Read first hand experiences and learn from those that lived through it.</p>
               </div>
-            </div>
            </div>
           </section>
         </div>
