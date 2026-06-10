@@ -307,6 +307,7 @@
 
 .feature h3 {
   color: var(--accent);
+  text-shadow: var(--text-shadow-soft);
   margin-bottom: 1rem;
 }
 

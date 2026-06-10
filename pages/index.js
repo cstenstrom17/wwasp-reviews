@@ -59,7 +59,7 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <h2>What's this about?</h2>
               <p>
-                Far to many children and adolescents have experienced trauma within institutional settings. The Troubled Teen Industry is made up of wilderness therapy programs, boot camps, residential treatment centers, and therapeutic boarding schools. 
+                Far too many children and adolescents have experienced trauma within institutional settings. The Troubled Teen Industry is made up of wilderness therapy programs, boot camps, residential treatment centers, and therapeutic boarding schools. 
               </p>
               <p>
                 Read reviews from people who have lived in and experienced these institutions.
