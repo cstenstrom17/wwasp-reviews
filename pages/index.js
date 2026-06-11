@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Reviews of the Troubled Teen Industry</title>
+        <title>Reviewing the Troubled Teen Industry</title>
         <meta name="description" content="Reviews from those that survived the Troubled Teen Industry." />
         <link
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap"
@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className={styles.srOnly}>You were heard.</h1>
 
             {/* Direct flex child — required for sticky to work */}
-            <div className={styles.youWereWrapper} aria-hidden="true">
+            <div className={styles.youWereWrapper} aria-hidden=\"true\">
               <span className={styles.youWere}>you were&nbsp;</span>
             </div>
 
@@ -40,9 +40,9 @@ export default function Home() {
           </div>
         </header>
 
-        {/* CTA panel */}
-        <main className={styles.heroCta}>
-          <section className={styles.heroCtaInner}>
+        {/* FIXED: Changed from <main> to <section> to prevent HTML landmark duplication conflicts */}
+        <section className={styles.heroCta}>
+          <div className={styles.heroCtaInner}>
             <p className={styles.ctaText}>your story matters.</p>
             <button
               className={styles.ctaButton}
@@ -50,8 +50,8 @@ export default function Home() {
             >
               Explore Programs
             </button>
-          </section>
-        </main>
+          </div>
+        </section>
 
         <div className={styles.pageContent}>
           <section className={styles.about}>
@@ -70,7 +70,7 @@ export default function Home() {
                 >
                   University of New Hampshire Inquiry Journal
                 </a>
-                      </span>
+                </span>
               </p>
             </div>
           </section>
@@ -96,4 +96,3 @@ export default function Home() {
     </>
   )
 }
-
