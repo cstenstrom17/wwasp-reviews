@@ -13,7 +13,7 @@ export default function Layout({ children }) {
               <h1>The TTI Index</h1>
             </Link>
             <span className={styles.tagline}>
-              A public repository of survivor accounts from the Troubled Teen Industry
+              A survivor-led public registry
             </span>
           </div>
 
