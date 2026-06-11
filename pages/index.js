@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className={styles.srOnly}>You were heard.</h1>
 
             {/* Direct flex child — required for sticky to work */}
-            <div className={styles.youWereWrapper} aria-hidden=\"true\">
+            <div className={styles.youWereWrapper} aria-hidden="true">
               <span className={styles.youWere}>you were&nbsp;</span>
             </div>
 
