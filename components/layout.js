@@ -29,7 +29,7 @@ export default function Layout({ children }) {
                 aria-expanded={dropdownOpen}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                Explore Archive
+                Explore
                 <span className={`${styles.arrow} ${dropdownOpen ? styles.arrowOpen : ''}`}>
                   ▼
                 </span>
