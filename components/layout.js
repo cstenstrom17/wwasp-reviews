@@ -1,9 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from './layout.module.css'
 
 export default function Layout({ children }) {
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const router = useRouter()
+
+  // Cleanly close the dropdown ONLY AFTER the page route successfully switches
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setDropdownOpen(false)
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router])
 
   return (
     <div className={styles.container}>
@@ -38,17 +53,18 @@ export default function Layout({ children }) {
               {dropdownOpen && (
                 <ul className={styles.dropdownMenu}>
                   <li>
-                    <Link href="/browse" onClick={() => setDropdownOpen(false)}>
+                    {/* Stripped out the destructive inline onClick triggers */}
+                    <Link href="/browse">
                       Browse Programs
                     </Link>
                   </li>
                   <li>
-                    <Link href="/submit" onClick={() => setDropdownOpen(false)}>
+                    <Link href="/submit">
                       Submit a Facility
                     </Link>
                   </li>
                   <li>
-                    <Link href="/resources" onClick={() => setDropdownOpen(false)}>
+                    <Link href="/resources">
                       Further Resources
                     </Link>
                   </li>
