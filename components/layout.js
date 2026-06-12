@@ -10,7 +10,7 @@ export default function Layout({ children }) {
           {/* Typographic Masthead Group */}
           <div className={styles.masthead}>
             <Link href="/" className={styles.logo}>
-              <h1>The TTI Index</h1>
+              <h1>Reviewing TTI</h1>
             </Link>
             <span className={styles.tagline}>
               A survivor-led public registry
@@ -31,7 +31,7 @@ export default function Layout({ children }) {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; 2026 The TTI Index. All rights reserved.</p>
+        <p>&copy; 2026 Reviewing the Troubled Teen Industry. All rights reserved.</p>
         <p>
           Noticed an error or missing facility? Let me know{" "}
           <a href="mailto:cstenstrom17@gmail.com" className={styles.footerLink}>
