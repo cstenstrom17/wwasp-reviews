@@ -47,7 +47,7 @@
   gap: 2.5rem;
 }
 
-/* 1. FIX: Use '>' to strictly target ONLY the top-level menu items for lines */
+/* FIX: Strictly targets ONLY the top-level menu items for header underline tracking */
 .nav > a {
   font-size: 1rem;
   font-weight: 500;
@@ -60,7 +60,6 @@
   opacity: 0.75;
 }
 
-/* 1. FIX: Ensure the hover underline animation ONLY builds on main header nav items */
 .nav > a::after {
   content: '';
   position: absolute;
@@ -70,3 +69,167 @@
   height: 2px;
   background-color: var(--primary-blue-grey);
   transition: width 0.2s ease;
+}
+
+.nav > a:hover::after {
+  width: 100%;
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 1;
+  width: 100%;
+  color: var(--text-charcoal);
+  /* FIX: Forces clean flex layout tree direction so child auto-margins center correctly */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-bleed children (like the hero) get no constraints.
+   Constrain inner page sections via their own wrappers instead.
+*/
+.main > section,
+.main > div > section,
+.main > div { 
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.main > section {
+  background: var(--neutral-light);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.footer {
+  background: linear-gradient(to top, var(--neutral-warm) 0%, #e8dfc7 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: auto; /* Keeps footer pinned to the bottom on short pages */
+}
+
+.footerLink {
+  color: var(--primary-blue-grey);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.footerLink:hover {
+  opacity: 0.8;
+}
+
+/* ============================================
+   NAVIGATION DROPDOWN ARCHITECTURE
+   ============================================ */
+
+.dropdownContainer {
+  position: relative; /* Anchor point for the absolute dropdown box */
+  display: inline-block;
+}
+
+.dropdownToggle {
+  background: transparent;
+  color: var(--neutral-light);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.dropdownToggle:hover {
+  background: transparent;
+  box-shadow: none;
+  opacity: 0.75;
+}
+
+.arrow {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+/* Float Menu Panel */
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 1rem); /* Keeps your exact visual gap spacing */
+  right: 0;
+  background-color: var(--neutral-light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  list-style: none;
+  min-width: 200px;
+  z-index: 200;
+  margin: 0;
+  animation: slideDownFade 0.2s ease-out forwards;
+}
+
+.dropdownMenu::before {
+  content: '';
+  position: absolute;
+  top: -1.25rem; /* Reaches up across the 1rem gap to overlap the header container */
+  left: 0;
+  right: 0;
+  height: 1.25rem; /* Creates an invisible platform keeping the hover tracking active */
+  background: transparent; /* Totally hidden from view */
+}
+
+.dropdownMenu li {
+  width: 100%;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-charcoal) !important; /* Forces visible high-contrast reading text */
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+  position: relative;
+}
+
+.dropdownMenu a:hover {
+  background-color: var(--neutral-warm);
+  opacity: 1;
+}
+
+/* FIX: Explicitly blocks parent elements from drawing animation rules inside the dropdown items */
+.dropdownMenu a::after {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+}
+
+/* Micro-interaction animation for standard polish */
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
