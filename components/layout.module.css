@@ -80,19 +80,18 @@
   color: var(--text-charcoal);
 }
 
-/* 
-  Full-bleed children (like the hero) get no constraints.
-  Constrain inner page sections via their own wrappers instead.
+/* Full-bleed children (like the hero) get no constraints.
+  Constrain inner page sections, including our resources card, via their own wrappers instead.
 */
 .main > section,
-.main > div > section {
+.main > div > section,
+.main > div > [class*="resourcesContainer"] { /* <--- ADD THIS SELECTOR */
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
 /* Section card styling — applied via pageContent wrapper in index.js */
 .main > section {
   background: var(--neutral-light);
