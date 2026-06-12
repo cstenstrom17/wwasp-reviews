@@ -165,7 +165,7 @@
 /* Float Menu Panel */
 .dropdownMenu {
   position: absolute;
-  top: calc(100% + 1rem); /* Positions menu cleanly below header line */
+  top: calc(100% + 1rem); /* Keeps your exact visual gap spacing */
   right: 0;
   background-color: var(--neutral-light);
   border: 1px solid var(--border);
@@ -177,6 +177,16 @@
   z-index: 200;
   margin: 0;
   animation: slideDownFade 0.2s ease-out forwards;
+}
+
+.dropdownMenu::before {
+  content: '';
+  position: absolute;
+  top: -1.25rem; /* Reaches up across the 1rem gap to overlap the header container */
+  left: 0;
+  right: 0;
+  height: 1.25rem; /* Creates an invisible platform keeping the hover tracking active */
+  background: transparent; /* Totally hidden from view */
 }
 
 .dropdownMenu li {
