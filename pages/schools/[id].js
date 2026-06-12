@@ -15,6 +15,7 @@ export default function SchoolDetail() {
   const [error, setError] = useState(null)
   const [submitting, setSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [checkedLegal, setCheckedLegal] = useState(false) // Legal state tracker
   
   const [formData, setFormData] = useState({
     author: '',
@@ -61,6 +62,16 @@ export default function SchoolDetail() {
   async function handleSubmitReview(e) {
     e.preventDefault()
     
+    if (!id) {
+      alert('Application context missing. Please refresh and try again.')
+      return
+    }
+
+    if (!checkedLegal) {
+      alert('You must certify the legal attestation statement to submit a review.')
+      return
+    }
+
     if (!formData.text.trim()) {
       alert('Please write a review')
       return
@@ -73,10 +84,10 @@ export default function SchoolDetail() {
         .from('reviews')
         .insert([
           {
-            school_id: parseInt(id),
-            author: formData.author || 'Anonymous',
+            school_id: isNaN(id) ? id : parseInt(id), // Dynamically handles integers or UUID string keys safely
+            author: formData.author.trim() || 'Anonymous',
             rating: parseInt(formData.rating),
-            text: formData.text,
+            text: formData.text.trim(),
             is_approved: false
           }
         ])
@@ -84,8 +95,9 @@ export default function SchoolDetail() {
       if (error) throw error
 
       setFormData({ author: '', rating: 5, text: '' })
+      setCheckedLegal(false) // Reset checkbox state
       setSubmitSuccess(true)
-      setTimeout(() => setSubmitSuccess(false), 5000)
+      setTimeout(() => setSubmitSuccess(false), 6000)
     } catch (err) {
       alert('Error submitting review: ' + err.message)
     } finally {
@@ -127,7 +139,7 @@ export default function SchoolDetail() {
             <div className={styles.meta}>
               {school.address && <p><strong>Address:</strong> {school.address}</p>}
               {school.city && school.state && (
-                <p><strong>Location:</strong> {school.city}, {school.state} {school.zip}</p>
+                <p><strong>Location:</strong> {school.city}, {school.state} {school.zip || ''}</p>
               )}
               {school.is_open !== null && (
                 <p>
@@ -177,22 +189,22 @@ export default function SchoolDetail() {
           <section className={styles.formSection}>
             <h2>Share Your Experience</h2>
             <p className={styles.formNote}>
-              Your review will be reviewed before posting. Reviews aren't edited - just preventing spam.
+              To protect the integrity of this archive, all entries are reviewed to prevent spam before going public. Accounts are never edited or altered.
             </p>
 
             {submitSuccess && (
               <div className={styles.success}>
-                <p>Thank you for sharing your experience. Your review will appear once it's been reviewed.</p>
+                <p>Thank you for your submission. Your account has been received and will appear below once approved by the curator.</p>
               </div>
             )}
 
             <form onSubmit={handleSubmitReview} className={styles.form}>
               <div className={styles.formGroup}>
-                <label htmlFor="author">Name (optional)</label>
+                <label htmlFor="author">Name / Pseudonym</label>
                 <input
                   id="author"
                   type="text"
-                  placeholder="Leave blank to post anonymously"
+                  placeholder="Optional — Leave blank to remain completely anonymous"
                   value={formData.author}
                   onChange={(e) => setFormData({ ...formData, author: e.target.value })}
                 />
@@ -214,20 +226,34 @@ export default function SchoolDetail() {
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="text">Your Experience</label>
+                <label htmlFor="text">Your Account</label>
                 <textarea
                   id="text"
                   rows={6}
-                  placeholder="Share your honest experience, what you learned, or what helped you..."
+                  placeholder="To best help searching families, please provide a factual, structural account of your stay. Consider describing details like daily routines, facility conditions, or standard operating metrics during your time there..."
                   value={formData.text}
                   onChange={(e) => setFormData({ ...formData, text: e.target.value })}
                   required
                 />
               </div>
 
+              {/* SECTION 230 LEGAL IMMUNITY ATTESTATION CHECKBOX */}
+              <div className={styles.legalGroup}>
+                <input
+                  id="legalAttestation"
+                  type="checkbox"
+                  checked={checkedLegal}
+                  onChange={(e) => setCheckedLegal(e.target.checked)}
+                  required
+                />
+                <label htmlFor="legalAttestation">
+                  I certify that this submission is a truthful, accurate representation of my firsthand experiences at this facility. I acknowledge that I am solely responsible for the context of this testimony under applicable law.
+                </label>
+              </div>
+
               <button
                 type="submit"
-                disabled={submitting}
+                disabled={submitting || !checkedLegal}
                 className={styles.submitBtn}
               >
                 {submitting ? 'Submitting...' : 'Submit Review'}

@@ -52,46 +52,6 @@ export default function Home() {
             </button>
           </div>
         </section>
-
-        <div className={styles.pageContent}>
-          <section className={styles.about}>
-            <div className={styles.aboutContent}>
-              <h2>What's this about?</h2>
-              <p>
-                Far too many children and adolescents have experienced trauma within institutional settings.
-                The Troubled Teen Industry is made up of wilderness therapy programs, boot camps, residential
-                treatment centers, and therapeutic boarding schools. Often unregulated, an estimated 100,000
-                to 120,000 are in these facilities every year. <br />
-                <span className={styles.source}>Source:{' '}
-                <a
-                  href="https://www.unh.edu/inquiryjournal/blog/2022/04/troubled-teen-industry-its-effects-oral-history"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  University of New Hampshire Inquiry Journal
-                </a>
-                </span>
-              </p>
-            </div>
-          </section>
-
-          <section className={styles.features}>
-            <div className={styles.featureGrid}>
-              <div className={styles.feature}>
-                <h3>Find Programs</h3>
-                <p>Browse programs, schools, camps and other institutions affiliated with the Troubled Teen Industry.</p>
-              </div>
-              <div className={styles.feature}>
-                <h3>Share Stories</h3>
-                <p>Leave reviews and share your story.</p>
-              </div>
-              <div className={styles.feature}>
-                <h3>Learn & Connect</h3>
-                <p>Read first hand experiences and learn from those that lived through it.</p>
-              </div>
-            </div>
-          </section>
-        </div>
       </Layout>
     </>
   )
