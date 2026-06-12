@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About | The TTI Index</title>
+        <title>About | TTI Reviews</title>
         <meta name="description" content="The mission, context, and catalyst behind the public registry." />
       </Head>
 
@@ -14,7 +14,7 @@ export default function About() {
         <article className={styles.aboutContainer}>
           <header className={styles.header}>
             <h1>The Mission Behind the Registry</h1>
-            <p className={styles.subtitle}>Why an independent public archive is required for institutional accountability.</p>
+            <p className={styles.subtitle}>Why did I want to build this site?</p>
           </header>
 
           <section className={styles.contentSection}>
@@ -22,7 +22,7 @@ export default function About() {
             <p>
               Traditional public review systems are built for consumer commerce, not institutional accountability. 
               When facilities face public scrutiny, algorithmic spam filters or direct interventions frequently cause 
-              platforms like Google to lock, freeze, or entirely disable user reviews on institutional listings.
+              platforms to lock, freeze, or entirely disable user reviews on institutional listings.
             </p>
             <p>
               When these review sections are wiped clean, decades of critical historical data and firsthand survivor accounts 
@@ -39,20 +39,17 @@ export default function About() {
               standardized regulations, an estimated 100,000 to 120,000 youth pass through these facilities every year.
             </p>
             <blockquote>
-              "Far too many children and adolescents have experienced profound systemic trauma within settings 
-              marketed to families as therapeutic environments."
-              <cite>— University of New Hampshire Inquiry Journal</cite>
+              "The troubled teen industry (TTI) consists of thousands of underregulated residential youth treatment facilities. These treatment facilities operate on                 a for-profit basis and trace their origins back to the 1958 cult Synanon."
+              <cite>— C. Jamie Mater, UNH Inquiry Journal</cite>
             </blockquote>
           </section>
 
           <section className={styles.contentSection}>
-            <h2>A Note from the Curator</h2>
+            <h2>A Note from Me</h2>
             <p>
               This project isn't abstract for me. Having spent time inside one of these facilities firsthand, 
               I know how isolating the experience is, both during your stay and in the years spent processing it afterward. 
-              When I realized that major search platforms were actively disabling the spaces where survivors could leave warning signs 
-              for other families, building this archive became a necessity.
-            </p>
+              I was only 14 when I was woken up in the middle of the night being handcuffed by strangers. I left at 16 and that was only when some accrediation were                 surfacing. I spent years blocking it out. When I realized that major search platforms were actively disabling the spaces where survivors could leave                   reviews of their first hand expierences, I started thinking about this site, what I wanted to do, and what I could do. My education was in Computer                    Science but focused on Data Science. So trying to figure out the frontend has been a needed challenge. It's been a lot of fun.
             <p>
               You were not alone then, and you are not alone now. Your stories are permanent, visible, and vital.
             </p>
