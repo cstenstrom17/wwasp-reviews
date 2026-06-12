@@ -13,8 +13,8 @@ export default function About() {
       <Layout>
         <article className={styles.aboutContainer}>
           <header className={styles.header}>
-            <h1>The Mission Behind the Registry</h1>
-            <p className={styles.subtitle}>Why did I want to build this site?</p>
+            <h1>The Mission </h1>
+            <p className={styles.subtitle}>Why this site? Why now?</p>
           </header>
 
           <section className={styles.contentSection}>
@@ -27,12 +27,12 @@ export default function About() {
             <p>
               When these review sections are wiped clean, decades of critical historical data and firsthand survivor accounts 
               vanish overnight. This platform was built to solve that problem: an un-freezable, independent registry 
-              where testimonies cannot be turned off or moderated away by corporate algorithms.
+              where testimonies cannot be turned off or moderated away by corporate algorithms. 
             </p>
           </section>
 
           <section className={styles.contentSection}>
-            <h2>The Industry Overview</h2>
+            <h2>The Industry</h2>
             <p>
               The Troubled Teen Industry (TTI) comprises a sprawling network of wilderness therapy programs, boot camps, 
               residential treatment centers, and therapeutic boarding schools. Often operating with minimal state oversight or 
@@ -45,7 +45,7 @@ export default function About() {
           </section>
 
           <section className={styles.contentSection}>
-            <h2>A Note from Me</h2>
+            <h2>One Last Note</h2>
             <p>
               This project isn't abstract for me. Having spent time inside one of these facilities firsthand, 
               I know how isolating the experience is, both during your stay and in the years spent processing it afterward. 
