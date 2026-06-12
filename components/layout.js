@@ -12,9 +12,6 @@ export default function Layout({ children }) {
             <Link href="/" className={styles.logo}>
               <h1>Reviewing TTI</h1>
             </Link>
-            <span className={styles.tagline}>
-              A survivor-led public registry
-            </span>
           </div>
 
           <nav className={styles.nav}>
