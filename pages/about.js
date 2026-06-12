@@ -50,6 +50,7 @@ export default function About() {
               This project isn't abstract for me. Having spent time inside one of these facilities firsthand, 
               I know how isolating the experience is, both during your stay and in the years spent processing it afterward. 
               I was only 14 when I was woken up in the middle of the night being handcuffed by strangers. I left at 16 and that was only when some accrediation were                 surfacing. I spent years blocking it out. When I realized that major search platforms were actively disabling the spaces where survivors could leave                   reviews of their first hand expierences, I started thinking about this site, what I wanted to do, and what I could do. My education was in Computer                    Science but focused on Data Science. So trying to figure out the frontend has been a needed challenge. It's been a lot of fun.
+            </p>
             <p>
               You were not alone then, and you are not alone now. Your stories are permanent, visible, and vital.
             </p>
