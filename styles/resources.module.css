@@ -11,7 +11,7 @@
 
 .header {
   margin-bottom: 3rem;
-  text-align: left; /* Left-aligned looks cleaner inside a directory container */
+  text-align: center;
 }
 
 .header h1 {
@@ -22,12 +22,12 @@
 .header p {
   font-size: 1.1rem;
   color: #4b5563; /* Medium gray body copy */
-  max-width: 700px;
-  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
   line-height: 1.5;
 }
 
-/* New section dividers to map through your arrays cleanly */
+/* Section dividers (ready if you implement array grouping later) */
 .resourceSection {
   margin-bottom: 4rem;
   padding-top: 2.5rem;
@@ -46,22 +46,27 @@
   margin-bottom: 2rem;
 }
 
+/* Clean grid configuration for structural columns */
 .resourcesList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* 2. Style the card to pop cleanly against the white container background */
+/* 2. Flexbox engine: forces each resource card to contain its own bounds cleanly */
 .resource {
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   background-color: #f9fafb; /* Soft light gray card fill */
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  
+  /* Pushes content layout vertically and locks the footer elements */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .resource:hover {
@@ -70,9 +75,10 @@
 }
 
 .resource h3 {
-  color: #111827; /* Dark heading for the resource title */
-  margin-bottom: 0.75rem;
+  color: #111827;
+  margin: 0 0 0.75rem 0; /* Clears default margins to keep alignment tight */
   font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .description {
@@ -80,19 +86,21 @@
   color: #374151; /* Balanced text color for reading summaries */
   font-size: 0.95rem;
   line-height: 1.6;
+  flex-grow: 1; /* Instructs text box to fill space, pinning the link down */
 }
 
-/* 3. Force a crisp, readable deep forest green for links */
+/* 3. High contrast, clean link tracking */
 .link {
   display: inline-block;
   color: #1b4332; /* Rich deep green link text */
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-decoration: none;
   transition: all 0.2s ease;
   align-self: flex-start;
+  margin-top: auto; /* Safety override anchor to floor the link */
 }
 
 .link:hover {
@@ -104,6 +112,10 @@
   .resourcesContainer {
     margin: 2rem 1rem;
     padding: 2rem 1.5rem;
+  }
+  .resourcesList {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .resource {
     padding: 1.5rem;
@@ -121,6 +133,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 3.5rem;
+  box-shadow: var(--card-shadow);
 }
 
 .crisisBanner strong {
