@@ -60,3 +60,25 @@
     padding: 1.5rem;
   }
 }
+
+.crisisBanner {
+  background-color: #ffe8e8; /* Soft warning red tint */
+  border: 1px solid var(--danger);
+  color: var(--text-charcoal);
+  border-radius: 8px;
+  padding: 1.25rem 1.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 3.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.crisisBanner strong {
+  color: var(--danger);
+  display: block;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
