@@ -1,3 +1,5 @@
+## Project Structure
+
 ```
 pages/
   ├── index.js                    # Landing page
