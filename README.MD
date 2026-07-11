@@ -1,9 +1,11 @@
+```
 pages/
   ├── index.js                    # Landing page
   ├── browse.js                   # Browse all schools
   ├── resources.js                # Connect with other organizations to learn about TTI
   ├── submit.js                   # Form to submit a facility that's not listed
-  └── schools/[id].js             # Dynamic school detail page
+  └── schools/
+    └── [id].js                   # Dynamic school detail page
 
 components/
   └── layout.js                   # Shared layout with navigation
@@ -17,3 +19,4 @@ styles/
   ├── home.module.css             # Landing page styles
   ├── browse.module.css           # Browse page styles
   └── school-detail.module.css    # Detail page styles
+```
